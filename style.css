@@ -13,15 +13,24 @@
     --body-background :rgba(13, 13, 13, 0.92);
     --divs-background : rgb(37, 39, 41);
     --inputs-color : rgb(108, 106, 106);
-    --headers-color: #4B88C2;
+    --major-topics-color: rgb(76, 149, 218);
+    --header-colors:rgb(238, 238, 238);
 
 }
 
+.light-mode{
+    --divs-background : rgb(209, 213, 220);
+    --body-background : rgb(238, 238, 238);
+    --inputs-color: rgba(13, 13, 13, 0.92);
+    --major-topics-color: rgb(76, 149, 218);
+    --header-colors:rgba(13, 13, 13, 0.92);
+}
 
 body{
     width: 100%;
     min-height: 100vh;
     background-color: var(--body-background);
+    --inputs-color: 
 }
 
 header{
@@ -37,7 +46,7 @@ header{
 }
 
 header a{
-    color: aliceblue;
+    color: var(--header-colors);
     text-decoration: none;
 }
 
@@ -51,6 +60,7 @@ nav{
 nav ul{
     width: 70%;
    display: flex;
+   align-items: center;
    justify-content: space-between;  
 }
 
@@ -60,9 +70,27 @@ nav ul li{
     font-size: 1.1rem;
 }
 
-/* .theme-controls box-icon{
-    
-} */
+.theme-controls{
+    background-color: var(--body-background);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.theme-controls box-icon{
+    cursor: pointer;
+}
+
+.theme-controls box-icon:last-child{
+    display: none;
+}
+
+.light-mode .theme-controls box-icon:first-child{
+    display: none;
+}
+
+.light-mode .theme-controls box-icon:last-child{
+    display: block;
+}
 
 .hero-page{
     margin-top: 350px;
