@@ -179,6 +179,7 @@ main{
 
 hr{
     border: 0.8px solid var(--major-topics-color);
+    margin: 20px 0px;
 }
 
 .books-grid{
@@ -198,4 +199,20 @@ hr{
 
 .list-item img{
     width: 100%;
+}
+
+.about-us {
+    margin: 30px 0px;
+}
+
+.about-us .about-us-note{
+    color: var(--inputs-color);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.about-us-note span{
+    color: var(--major-topics-color);
+    font-weight: 550;
+    font-size: 1.25rem;
 }
