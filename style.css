@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
     outline: 2px solid red;
 }
 
@@ -20,6 +21,51 @@
 body{
     width: 100%;
     min-height: 100vh;
+    background-color: var(--body-background);
+}
+
+header{
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    z-index: 10;
+    background-color: var(--divs-background);
+}
+
+header a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    width: 70%;
+   display: flex;
+   justify-content: space-between;  
+}
+
+nav ul li{
+    margin-right: 60px;
+    list-style:none;
+    font-size: 1.1rem;
+}
+
+/* .theme-controls box-icon{
+    
+} */
+
+.hero-page{
+    margin-top: 350px;
 }
 
 .books-grid{
