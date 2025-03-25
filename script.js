@@ -20,29 +20,18 @@ function populateBooks(book){
 }
 
 // Light and Dark theme controls
-let lightMode = localStorage.getItem("lightMode")
 const themeSwitch = document.querySelector(".theme-controls")
 
-function enableLightMode(){
-    document.body.classList.add("light-mode")
-    localStorage.setItem("lightMode", "active")
-}
+function togglingTheme(){
+    const lightThemeBtn = document.querySelector(".light-theme-btn");
+    const darkThemeBtn = document.querySelector(".dark-theme-btn");
 
-function disableLightMode(){
-    document.body.classList.remove("light-mode")
-    localStorage.setItem("lightMode", "null")
-}
+    lightThemeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");       
+    });
 
-if(lightMode === "active"){
-    enableLightMode()
+    darkThemeBtn.addEventListener("click", () => {
+        document.body.classList.remove("light-mode")
+    })
 }
-
-themeSwitch.addEventListener("click", () => {
-    lightMode = localStorage.getItem("lightMode")
-    if(lightMode !== "active"){
-        enableLightMode()
-    }
-    else{
-        disableLightMode()
-    }
-})
+togglingTheme()

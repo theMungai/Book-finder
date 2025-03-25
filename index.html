@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>The Book Finder</title>
 </head>
-<body class="light-mode">
+<body>
     <header>
         <a href="#hero-page">
             <h1 class="header-logo">Book Finder</h1>
@@ -22,8 +22,8 @@
 
 
             <div class="theme-controls">
-                <box-icon name='sun' type='solid' color='#e2e0e0' ></box-icon>
-                <box-icon type='solid' name='moon'></box-icon>
+                <box-icon name='sun' type='solid' color='#e2e0e0' class="light-theme-btn"></box-icon>
+                <box-icon type='solid' name='moon' class="dark-theme-btn"></box-icon>
             </div>
         </nav>
     </header>
@@ -32,7 +32,7 @@
         <section class="hero-page" id="hero-page">
             <div class="search-and-filter-section">
                 <div class="search-container">
-                    <input type="text" name="" class="search-bar">
+                    <input type="text" name="" class="search-bar" placeholder="Search book...">
                     <button class="search-button">Search</button>
                 </div>
     

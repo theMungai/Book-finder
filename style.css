@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 :root{
@@ -30,7 +30,6 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: var(--body-background);
-    --inputs-color: 
 }
 
 header{
@@ -71,7 +70,7 @@ nav ul li{
 }
 
 .theme-controls{
-    background-color: var(--body-background);
+    background-color: var(--divs-background);
     padding: 5px;
     border-radius: 50%;
 }
@@ -92,8 +91,57 @@ nav ul li{
     display: block;
 }
 
+main{
+    width: 70%;
+    margin: 0px auto;
+}
+
 .hero-page{
     margin-top: 350px;
+    
+}
+
+.hero-page .search-and-filter-section{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.hero-page .filter-options{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.search-container{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    margin-left: 60px;
+}
+
+.search-container input{
+    width: 70%;
+    padding: 10px;
+    background-color: var(--divs-background);
+    color: var(--inputs-color);
+    outline: none;
+    border: 0.5px solid var(--inputs-color);
+}
+
+.search-container button{
+    padding: 10px;
+    background-color: var(--divs-background);
+    background-color: var(--divs-background);
+    color: var(--inputs-color);
+    outline: none;
+    border: 0.5px solid var(--inputs-color);
+    cursor: pointer;
+}
+
+.filter-options {
+    text-align: center;
 }
 
 .books-grid{
