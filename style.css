@@ -13,7 +13,7 @@
     --body-background :rgba(13, 13, 13, 0.92);
     --divs-background : rgb(37, 39, 41);
     --inputs-color : rgb(108, 106, 106);
-    --major-topics-color: rgb(76, 149, 218);
+    --major-topics-color: rgb(79, 210, 228);
     --header-colors:rgb(238, 238, 238);
 
 }
@@ -42,6 +42,10 @@ header{
     top: 0%;
     z-index: 10;
     background-color: var(--divs-background);
+}
+
+header .header-logo{
+    color: var(--major-topics-color);
 }
 
 header a{
@@ -106,32 +110,41 @@ main{
     align-items: center;
     column-gap: 2rem;
     margin: 20px auto;
-    width: 70%;
-}
-
-.hero-page .filter-options{
-    width: 70%;
-    margin: 20px auto;
+    width: 100%;
 }
 
 .search-container{
-    width: 80%;
+    width: 70%;
     text-align: center;
     display: flex;
     margin-left: 60px;
+    border: 0.5px solid var(--inputs-color);
 }
 
 .search-container input{
-    width: 70%;
+    width: 100%;
     padding: 10px;
     background-color: var(--divs-background);
     color: var(--inputs-color);
     outline: none;
-    border: 0.5px solid var(--inputs-color);
+    border: none;
 }
 
 .search-container button{
-    padding: 10px;
+    padding: 10px 20px;
+    background-color: var(--divs-background);
+    background-color: var(--divs-background);
+    color: var(--inputs-color);
+    outline: none;
+    border: none;
+    border-left: 0.5px solid var(--inputs-color);
+    cursor: pointer;
+}
+
+.toggle-filters{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
     background-color: var(--divs-background);
     background-color: var(--divs-background);
     color: var(--inputs-color);
@@ -141,11 +154,35 @@ main{
 }
 
 .filter-options {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 20px 60px;
+    width: 70%;
+}
+
+.button-filters{
+    /* display: none; */
+    padding: 10px 15px;
+    background-color: var(--divs-background);
+    color: var(--inputs-color);
+    border: none;
+    cursor: pointer;
+}
+
+.home-books-header{
+    padding: 10px 0px;
+    color: var(--major-topics-color);
+    font-size: 1.2rem;
+}
+
+hr{
+    border: 0.8px solid var(--major-topics-color);
 }
 
 .books-grid{
-    width: 70%;
+    width: 100%;
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
