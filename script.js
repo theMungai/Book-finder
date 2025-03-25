@@ -9,6 +9,7 @@ const booksGrid = document.querySelector(".books-grid");
 booksGrid.innerHTML = ""
 function populateBooks(book){
     let bookPoster = document.createElement("li")
+    bookPoster.classList.add("list-item")
     bookPoster.innerHTML = `<img src = "${book.image_url}">`
     booksGrid.appendChild(bookPoster)
     

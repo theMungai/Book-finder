@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--link Custom CSS  -->
     <link rel="stylesheet" href="style.css">
     <title>The Book Finder</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <a href="#hero-page">
+            <h1 class="header-logo">Book Finder</h1>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+
+
+            <div class="theme-controls">
+                <box-icon type='solid' name='moon'></box-icon>
+                <box-icon name='sun' type='solid' ></box-icon>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section class="hero-page"></section>
+        <section class="hero-page" id="hero-page"></section>
 
         <section class="books-section">
             <p>Recommended Books</p>
+            <hr>
             <ul class="books-grid">
                 <!-- Poulated books dynamically in JavaScript -->
 
@@ -23,12 +43,17 @@
 
         <section class="comment-section"></section>
 
-        <section class="about-us"></section>
+        <section class="about-us" id="about-us"></section>
 
-        <section class="contact-us"></section>
+        <section class="contact-us" id="contact-us"></section>
     </main>
 
     <footer></footer>
 </body>
+
+<!-- Link Box Icons -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+<!-- Link vanilla JavaScript -->
 <script src="script.js"></script>
 </html>
