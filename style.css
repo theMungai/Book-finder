@@ -193,7 +193,6 @@ hr{
 
 .list-item{
     width: 200px;
-    /* height: 300px; */
     list-style: none;
 }
 
@@ -297,4 +296,84 @@ hr{
 
 #result{
     color: var(--major-topics-color);
+}
+
+/* Dynamically generated div styles */
+
+.dynamically-generated-div{
+    width: 100%;
+    height: auto;
+    margin: 200px auto;
+    padding: 20px;
+}
+
+.take-me-back-button{
+    display: flex;
+    align-items: center;
+    column-gap: 0.6rem;
+    color: var(--inputs-color);
+    margin: 25px 0px;
+    cursor: pointer;
+}
+
+.book-full-details{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+.book-cover{
+    width: 350px;
+}
+
+.book-cover img{
+    width: 100%;
+}
+
+.book-full-info{
+    width: 65%;
+}
+
+.book-header .author{
+    font-weight: 300;
+    color: var(--inputs-color);
+    font-style: oblique;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.comments-and-likes-stats{
+    color: var(--inputs-color);
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-weight: 300;
+}
+
+.comment-stats,
+.like-stats{
+    display: flex;
+    align-items: center;
+    column-gap: 0.6rem;
+}
+
+.full-book-description p{
+    line-height: 1.8;
+    color: var(--inputs-color);
+    font-weight: 300;
+}
+
+.book-detailed-info-container{
+    margin: 50px 0px;
+}
+
+.book-detailed-info{
+    display: grid;
+    grid-template-columns: 0.5fr 0.1fr 1fr;
+    margin: 20px 0px;
+    color: var(--inputs-color);
+}
+
+.detailed-answer{
+    font-weight: 270;
 }

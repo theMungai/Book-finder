@@ -83,3 +83,9 @@ function footerYear(){
     currentYear.textContent = new Date().getFullYear()
 }
 footerYear()
+
+// Toogling Filter Button
+
+// Programming Search button
+
+// Creating book details dynamically
