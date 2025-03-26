@@ -76,3 +76,10 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
+
+// Customize footer to update current year
+function footerYear(){
+    const currentYear = document.querySelector(".footer-current-year");
+    currentYear.textContent = new Date().getFullYear()
+}
+footerYear()
