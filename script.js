@@ -123,6 +123,7 @@ function bookDetails(book){
                     </div>
                 </div>
             </div>
+            
         </section>
     `
 
