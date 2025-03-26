@@ -62,10 +62,10 @@ function bookDetails(book){
     let main = `
         <section class="dynamically-generated-div">
             <div class="after-search-redirect">
-                <div class="take-me-back-button">
+                <button class="take-me-back-button">
                     <i class="fa-solid fa-arrow-left-long"></i>
                     ${book.name}
-                </div>
+                </button>
 
                 <div class="book-full-details">
                     <div class="book-cover">
@@ -126,19 +126,19 @@ function bookDetails(book){
         </section>
     `
 
-    
     mainHTML.innerHTML = main
+
+    // Refresh Page functionality
+    function refreshPage(){
+        const backButton = document.querySelector(".take-me-back-button");
+        backButton.addEventListener("click", () => {
+            window.location.reload(true)   
+        })
+        
+    }
+    refreshPage()
+
 }
-
-
-
-
-
-
-
-
-
-
 
 
 // Email API
