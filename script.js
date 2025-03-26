@@ -15,7 +15,11 @@ function populateBooks(book){
     let bookPoster = document.createElement("li")
     bookPoster.classList.add("list-item")
     bookPoster.innerHTML = `<img src = "${book.image_url}">`
+    bookPoster.addEventListener("click", () => {
+        bookDetails(book)
+    })
     booksGrid.appendChild(bookPoster)
+    
     
 }
 
@@ -35,6 +39,106 @@ function togglingTheme(){
     })
 }
 togglingTheme()
+
+
+
+// Customize footer to update current year
+function footerYear(){
+    const currentYear = document.querySelector(".footer-current-year");
+    currentYear.textContent = new Date().getFullYear()
+}
+footerYear()
+
+// Toogling Filter Button
+
+// Programming Search button
+
+// Creating book details dynamically
+
+const mainHTML = document.querySelector("main")
+// mainHTML.innerHTML = ""
+
+function bookDetails(book){
+    let main = `
+        <section class="dynamically-generated-div">
+            <div class="after-search-redirect">
+                <div class="take-me-back-button">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    ${book.name}
+                </div>
+
+                <div class="book-full-details">
+                    <div class="book-cover">
+                        <img src="${book.image_url}" alt="">
+                    </div>
+                    <div class="book-full-info">
+                        <div class="book-header">
+                            <p class="home-books-header">${book.name}</p>
+                            <p class="author">${book.author}</p>
+                        </div>
+
+                        <div class="comments-and-likes-stats">
+                            <p class="comment-stats">
+                                <i class="fa-solid fa-comment"></i>
+                                ${book.comments} Comments
+                            </p>
+
+                            <p class="like-stats">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                ${book.likes} likes
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="full-book-description">
+                            <p>${book.description}</p>
+                        </div>
+
+                        <div class="book-detailed-info-container">
+                            <div class="book-detailed-info">
+                                <p>Categories</p>
+                                <p class="details-separator">:</p>
+                                <p class="detailed-answer">${book.categories}</p>
+                            </div>
+
+                            <div class="book-detailed-info">
+                                <p>Year of Publication</p>
+                                <p class="details-separator">:</p>
+                                <p class="detailed-answer">${book.year_of_publication}</p>
+                            </div>
+
+                            <div class="book-detailed-info">
+                                <p>Pages</p>
+                                <p class="details-separator">:</p>
+                                <p class="detailed-answer">${book.number_of_pages}</p>
+                            </div>
+
+                            <div class="book-detailed-info">
+                                <p>Language</p>
+                                <p class="details-separator">:</p>
+                                <p class="detailed-answer">${book.language}</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `
+
+    
+    mainHTML.innerHTML = main
+}
+
+
+
+
+
+
+
+
+
+
 
 
 // Email API
@@ -76,16 +180,3 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
-
-// Customize footer to update current year
-function footerYear(){
-    const currentYear = document.querySelector(".footer-current-year");
-    currentYear.textContent = new Date().getFullYear()
-}
-footerYear()
-
-// Toogling Filter Button
-
-// Programming Search button
-
-// Creating book details dynamically
