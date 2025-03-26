@@ -123,7 +123,22 @@ function bookDetails(book){
                     </div>
                 </div>
             </div>
-            
+
+            <section class="comment-section">
+                <div class="comment-keeper">
+                    <div class="user-info-and-time">                    
+                            <p class="user-name">Anonymous</p>
+                            <p class="comment-time">8 days ago</p>                    
+                    </div>
+                </div>
+                <div class="comment-user-input">
+                    <input type="text" class="comment-input" placeholder="Add a comment">
+                    <div class="comment-buttons">
+                        <button class="cancel-button">Cancel</button>
+                        <button class="comment-button" disabled>Comment</button>
+                    </div>
+                </div>
+            </section>
         </section>
     `
 
@@ -138,6 +153,27 @@ function bookDetails(book){
         
     }
     refreshPage()
+
+    // Handle comment section functionality
+    const commentButton = document.querySelector(".comment-button");
+    const commentInput = document.querySelector(".comment-input");
+
+    function handleComments() {
+        const inputValue = commentInput.value;
+
+        if (inputValue !== "") {
+            commentButton.classList.add("activate-comment-button");
+            commentButton.disabled = false;
+        } else {
+            commentButton.disabled = true;
+            commentButton.classList.add("deactivate-comment-button");
+        }
+    }
+
+    commentInput.addEventListener('input', () => {
+        handleComments()
+    });
+
 
 }
 

@@ -426,7 +426,7 @@ hr{
     float: right;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .comment-buttons .cancel-button{
@@ -445,12 +445,22 @@ hr{
 }
 
 .comment-buttons .comment-button{
-    color: var(--header-colors);
-    background-color: rgba(114, 114, 114, 0.863);
     border: none;
     outline: none;
     border-radius: 25px;
     padding: 10px 16px;
     font-weight: 500;
+    
+}
+
+.activate-comment-button{
+    background-color: var(--major-topics-color);
+    color: rgba(13, 13, 13, 0.92);
     cursor: pointer;
+}
+
+.deactivate-comment-button{
+    background-color:rgba(82, 81, 81, 0.61) ;
+    color: rgb(122, 122, 122);
+    cursor: not-allowed;
 }
