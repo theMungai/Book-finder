@@ -3,7 +3,7 @@
 function fetchBooks(){
     fetch("http://localhost:3000/books")
     .then((response) => response.json())
-    .then((books) => books.forEach((book) => populateBooks(book)))
+    .then((books) =>  populateBooks(books))
 }
 fetchBooks()
 
@@ -11,16 +11,18 @@ fetchBooks()
 // Display Books to the DOM
 const booksGrid = document.querySelector(".books-grid");
 booksGrid.innerHTML = ""
-function populateBooks(book){
-    let bookPoster = document.createElement("li")
-    bookPoster.classList.add("list-item")
-    bookPoster.innerHTML = `<img src = "${book.image_url}">`
-    bookPoster.addEventListener("click", () => {
-        bookDetails(book)
-    })
-    booksGrid.appendChild(bookPoster)
+function populateBooks(books){
+    books.forEach((book => {
+        let bookPoster = document.createElement("li")
+        bookPoster.classList.add("list-item")
+        bookPoster.innerHTML = `<img src = "${book.image_url}">`
+        bookPoster.addEventListener("click", () => {
+            bookDetails(book)
+        })
+        booksGrid.appendChild(bookPoster)
+    }))
     
-    
+    handleSearchBar(books)
 }
 
 // Light and Dark theme controls
@@ -49,12 +51,48 @@ function footerYear(){
 }
 footerYear()
 
-// Toogling Filter Button
-
 // Programming Search button
+const resultsBox = document.querySelector(".result-box");
+    const searchInput = document.querySelector(".search-bar");
+function handleSearchBar(books){
+
+    // Event listener for the input
+    searchInput.addEventListener("keyup", () => {
+        let result = [];
+        let input = searchInput.value
+
+        if(input.length){
+             result = books.filter((book) => {
+                return book.name.toLowerCase().includes(input.toLowerCase())
+            });
+            resultsBox.innerHTML = '';
+            
+            result.forEach((book) => {
+                let searchedItem = document.createElement("li")
+                searchedItem.textContent = book.name;
+                searchedItem.classList.add("searched-item")
+                searchedItem.addEventListener("click", () => {
+                    selectSearchedItem(searchedItem)
+                })
+                resultsBox.appendChild(searchedItem)
+            })          
+        }
+        else{
+            resultsBox.innerHTML = ""
+        }
+        
+        
+    })
+    
+}
+
+function selectSearchedItem(list){
+    searchInput.value = list.innerHTML;
+    resultsBox.innerHTML = ""
+}
+
 
 // Creating book details dynamically
-
 const mainHTML = document.querySelector("main")
 // mainHTML.innerHTML = ""
 
