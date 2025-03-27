@@ -53,7 +53,7 @@ footerYear()
 
 // Programming Search button
 const resultsBox = document.querySelector(".result-box");
-    const searchInput = document.querySelector(".search-bar");
+const searchInput = document.querySelector(".search-bar");
 function handleSearchBar(books){
 
     // Event listener for the input
@@ -82,6 +82,13 @@ function handleSearchBar(books){
         }
         
         
+        // Search button event listener
+        const searchButton = document.querySelector(".search-button")
+        searchButton.addEventListener("click", () => {
+            books.forEach((book) => {
+                searchButtonFun(book)
+            })
+        })
     })
     
 }
@@ -89,6 +96,13 @@ function handleSearchBar(books){
 function selectSearchedItem(list){
     searchInput.value = list.innerHTML;
     resultsBox.innerHTML = ""
+}
+
+function searchButtonFun(book){
+    if(searchInput.value === book.name){
+        bookDetails(book)
+    }
+    
 }
 
 
