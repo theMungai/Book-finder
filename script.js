@@ -134,11 +134,6 @@ function bookDetails(book){
                                 <i class="fa-solid fa-comment"></i>
                                 ${book.comments} Comments
                             </p>
-
-                            <p class="like-stats">
-                                <i class="fa-solid fa-thumbs-up"></i>
-                                ${book.likes} likes
-                            </p>
                         </div>
                         <hr>
                         <div class="full-book-description">
@@ -182,6 +177,9 @@ function bookDetails(book){
                             <p class="user-name">Anonymous</p>
                             <p class="comment-time">8 days ago</p>                    
                     </div>
+                    <div class = "commentHouse">
+                    <p class = "comment-container"></p>
+                    </div>
                 </div>
                 <div class="comment-user-input">
                     <input type="text" class="comment-input" placeholder="Add a comment">
@@ -196,10 +194,19 @@ function bookDetails(book){
 
     mainHTML.innerHTML = main
 
+    const commentButton = document.querySelector(".comment-button");
+    const commentInput = document.querySelector(".comment-input");
+
+    // Comment button eventHandler
+    commentButton.addEventListener("click", () => {
+        commentCount()
+        // console.log("Clicked");
+        
+    })
+
     // Refresh Page functionality
     function refreshPage(){
-        const backButton = document.querySelector(".take-me-back-button");
-        backButton.addEventListener("click", () => {
+        document.querySelector(".take-me-back-button").addEventListener("click", () => {
             window.location.reload(true)   
         })
         
@@ -207,8 +214,7 @@ function bookDetails(book){
     refreshPage()
 
     // Handle comment section functionality
-    const commentButton = document.querySelector(".comment-button");
-    const commentInput = document.querySelector(".comment-input");
+    
 
     function handleComments() {
         const inputValue = commentInput.value;
@@ -229,6 +235,16 @@ function bookDetails(book){
 
 }
 
+
+// Comment functionality
+let count = 0
+function commentCount(){
+    const commentInput = document.querySelector(".comment-input")
+    const commentContainer = document.querySelector(".comment-container");
+
+    commentInput.value = commentContainer.textContent
+
+}
 
 // Email API
 const form = document.getElementById('form');
