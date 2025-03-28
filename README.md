@@ -29,15 +29,9 @@ Book Finder is a Single Page Application (SPA) that allows users to search for t
 
 ---
 
-### 1. Clone the repository
+### File Structure
 
-Book-finder/
-│
-├── index.html            
-├── style.css            
-├── script.js             
-├── db.json               
-└── README.md   
+/Book-finder ├── public/ │ └── [static files for the app] ├── .gitignore ├── .vercelignore ├── README.md ├── db.json ├── index.html ├── package-lock.json ├── package.json ├── script.js ├── style.css └── vercel.json   
 
 ## How to Set Up
 
