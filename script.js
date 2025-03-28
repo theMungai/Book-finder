@@ -171,23 +171,23 @@ function bookDetails(book) {
             </div>
 
             <section class="comment-section">
-                <div class="comment-keeper">
-                    <!-- Dynamically display comments here -->
-                    ${book.commentPost.map(comment => `
-                        <div class="comment">
-                            <p class="user-name">Anonymous</p>
-                            <p class="comment-time">Just now</p>
-                            <p class="comment-container">${comment}</p>
-                        </div>
-                    `).join('')}
-                </div>
-
                 <div class="comment-user-input">
                     <input type="text" class="comment-input" placeholder="Add a comment">
                     <div class="comment-buttons">
                         <button class="cancel-button">Cancel</button>
                         <button class="comment-button" disabled>Comment</button>
                     </div>
+                </div>
+
+                <div class="comment-keeper">
+                    <!-- Dynamically display comments here -->
+                    ${book.commentPost.map(comment => `
+                        <div class="user-info-and-time">
+                            <p class="user-name">Anonymous</p>
+                            <p class="comment-time">Just now</p>                            
+                        </div>
+                        <p class="comment-container">${comment}</p>
+                    `).join('')}
                 </div>
             </section>
         </section>
@@ -221,7 +221,7 @@ async function postComment(book) {
         return;
     }
 
-    book.commentPost.push(commentInput);
+    book.commentPost.unshift(commentInput);
     book.comments += 1;
 
     // Make a PUT request to update the book in the database

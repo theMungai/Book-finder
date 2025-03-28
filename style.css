@@ -428,6 +428,7 @@ hr{
 
 .comment-section .comment-keeper{
     width: 100%;
+    margin-top: 60px;
 }
 
 .user-info-and-time{
@@ -435,7 +436,7 @@ hr{
     align-items: center;
     column-gap: 1rem;
     color: var(--inputs-color);
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .user-info-and-time .comment-time{
@@ -444,8 +445,18 @@ hr{
     font-size: 0.8rem;
 }
 
+.comment-container{
+    padding: 20px 15px;
+    border-radius: 10px;
+    border-bottom: 0.5px solid var(--major-topics-color);
+    background-color: var(--divs-background);
+    color: var(--inputs-color);
+    font-weight: 300;
+}
+
 .comment-user-input{
     width: 100%;
+    margin-bottom: 100px;
 
 }
 
@@ -457,10 +468,11 @@ hr{
     border-bottom: 1px solid var(--inputs-color);
     background-color: transparent;
     font-weight: 300;
+    padding: 10px;
 }
 
 .comment-buttons{
-    margin: 15px;
+    margin: 20px;
     width: 20%;
     float: right;
     display: flex;
