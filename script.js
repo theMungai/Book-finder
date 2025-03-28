@@ -195,6 +195,16 @@ function bookDetails(book) {
 
     mainHTML.innerHTML = main;
 
+    // Refresh Page functionality
+    function refreshPage(){
+        const backButton = document.querySelector(".take-me-back-button");
+        backButton.addEventListener("click", () => {
+            window.location.reload(true)   
+        })
+        
+    }
+    refreshPage()
+
     const commentButton = document.querySelector(".comment-button");
     const commentInput = document.querySelector(".comment-input");
 
@@ -207,6 +217,7 @@ function bookDetails(book) {
     commentInput.addEventListener('input', () => {
         if (commentInput.value.trim()) {
             commentButton.disabled = false;
+            commentButton.classList.add("activate-comment-button")
         } else {
             commentButton.disabled = true;
         }
