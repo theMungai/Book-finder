@@ -5,6 +5,10 @@
 Book Finder is a Single Page Application (SPA) that allows users to search for their favorite books, read detailed descriptions, and leave comments on the books. Users can toggle between dark and light modes, and they can submit feedback using a "Contact Us" form. The application uses a `db.json` file to mock a server, storing book data and user comments.
 
 ---
+## Project Links
+- **Frontend(Vercel) Url:** https://book-finder-steel-gamma.vercel.app/
+- **Backend(Mock server) Url :**  https://book-finder-8ady.onrender.com/books
+---
 
 ## Features
 
@@ -25,21 +29,15 @@ Book Finder is a Single Page Application (SPA) that allows users to search for t
 
 ---
 
-### 1. File Structure
+### 1. Clone the repository
 
-/Book-finder
-├── public/               
-│   └── .keep       
-├── .gitignore            
-├── .vercelignore        
-├── README.md             
-├── db.json               
+Book-finder/
+│
 ├── index.html            
-├── package-lock.json     
-├── package.json          
+├── style.css            
 ├── script.js             
-├── style.css             
-└── vercel.json           
+├── db.json               
+└── README.md   
 
 ## How to Set Up
 
