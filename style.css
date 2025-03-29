@@ -6,24 +6,24 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+    transition: 1s;
     /* outline: 2px solid red; */
 }
 
 :root{
-    --body-background :rgb(13, 13, 13);
-    --divs-background : rgb(37, 39, 41);
-    --inputs-color : rgb(108, 106, 106);
-    --major-topics-color: rgb(79, 210, 228);
+    --body-background :rgb(8, 8, 22);
+    --divs-background : rgb(27, 30, 50);
+    --inputs-color : rgba(226, 226, 226, 0.705);
+    --major-topics-color: rgba(145, 165, 42, 0.945);
     --header-colors:rgb(238, 238, 238);
 
 }
 
 .light-mode{
-    --divs-background : rgb(209, 213, 220);
+    --divs-background : rgb(8, 8, 22);
     --body-background : rgb(238, 238, 238);
     --inputs-color: rgba(13, 13, 13, 0.92);
-    --major-topics-color: rgb(76, 149, 218);
-    --header-colors:rgba(13, 13, 13, 0.92);
+    --header-colors:rgb(238, 238, 238);
 }
 
 body{
@@ -101,8 +101,27 @@ main{
 }
 
 .hero-page{
-    margin-top: 350px;
+    margin-top: 250px;
     
+}
+
+.hero-text{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.hero-text h1{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--inputs-color);
+}
+
+.hero-text p{
+    text-align: center;
+    color: var(--inputs-color);
+    line-height: 1.8;
+    font-weight: 280;
+    padding: 20px 0px;
 }
 
 .hero-page .search-and-filter-section{
@@ -114,7 +133,7 @@ main{
 }
 
 .search-box-container{
-    width: 70%;
+    width: 80%;
     margin: 30px auto;
     position: relative;  
 }
@@ -124,7 +143,6 @@ main{
     max-height: 300px;
     overflow-y: scroll;
     width: 100%;
-    border-top: 0.5px solid var(--inputs-color);
     background-color: var(--divs-background);
 }
 
@@ -134,7 +152,7 @@ main{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(76, 149, 218); 
+    background: rgba(145, 165, 42, 0.945); 
 }
 
 ::-webkit-scrollbar-button {
@@ -145,37 +163,37 @@ main{
     list-style: none;
     padding: 10px 15px;
     font-weight: 300;
-    color: var(--inputs-color);
+    color: var(--header-colors);
     cursor: pointer;
 }
 .searched-item:hover{
-    background-color: var(--body-background);
+    background-color: rgba(145, 165, 42, 0.945);
 }
 
 .search-container{
     width: 100%;    
     display: flex;
-    align-items: center;
-    border: 0.5px solid var(--inputs-color);   
+    padding: 20px;
+    border-radius: 20px;   
 }
 
 .search-container input{
-    width: 100%;
-    padding: 12px;
-    background-color: var(--divs-background);
+    width: 90%;
+    background-color: transparent;
     color: var(--inputs-color);
     outline: none;
     border: none;
+    font-size: 1rem;
+    border-bottom: 0.5px solid ;
 }
 
 .search-container button{
-    padding: 10px 20px;
-    background-color: var(--divs-background);
-    background-color: var(--divs-background);
-    color: var(--inputs-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--major-topics-color);
     outline: none;
     border: none;
-    border-left: 0.5px solid var(--inputs-color);
     cursor: pointer;
 }
 
@@ -317,20 +335,20 @@ hr{
     font-weight: 300;
     border: none;
     border-radius: 5px;
-    border-bottom: 0.5px solid var(--inputs-color);
     background-color: var(--divs-background);
-    color: var(--inputs-color);
+    color: var(--header-colors);
     outline: none;
 }
 
 .submit-button{
     margin: 30px 0px;
-    padding: 10px;
+    padding: 10px 13px;
     background-color: var(--major-topics-color);
     border: none;
     outline: none;
     color: black;
     cursor: pointer;
+    border-radius: 30px;
 }
 
 #result{
@@ -450,7 +468,7 @@ hr{
     border-radius: 10px;
     border-bottom: 0.5px solid var(--major-topics-color);
     background-color: var(--divs-background);
-    color: var(--inputs-color);
+    color: var(--header-colors);
     font-weight: 300;
 }
 
@@ -481,7 +499,7 @@ hr{
 }
 
 .comment-buttons .cancel-button{
-    color: var(--header-colors);
+    color: var(--inputs-color);
     background-color: transparent;
     border: none;
     outline: none;
@@ -519,7 +537,7 @@ hr{
 footer{
     width: 100%;
     background-color: var(--divs-background);
-    color: var(--inputs-color);
+    color: var(--header-colors);
     text-align: center;
     padding: 30px 0px;
 }

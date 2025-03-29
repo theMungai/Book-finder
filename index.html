@@ -9,6 +9,8 @@
     
     <!--link Custom CSS  -->
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
     <title>The Book Finder</title>
 </head>
 <body>
@@ -25,19 +27,28 @@
 
 
             <div class="theme-controls">
-                <box-icon name='sun' type='solid' color='#e2e0e0' class="light-theme-btn"></box-icon>
-                <box-icon type='solid' name='moon' class="dark-theme-btn"></box-icon>
+                <box-icon name='sun' color='rgba(145,165,42,0.95)' class="light-theme-btn" ></box-icon>
+                <box-icon type='solid' name='moon' color='rgba(145,165,42,0.95)' class="dark-theme-btn"></box-icon>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="hero-page" id="hero-page">
+            <div class="hero-text">
+                <h1>
+                    Discover the world’s <br> best books
+                </h1>
+
+                <p>
+                    Browse through a wide range of captivating books, carefully selected to inspire your next literary journey. From timeless classics to modern bestsellers, find your next great read and immerse yourself in new worlds.
+                </p>
+            </div>
             <div class="search-box-container">
                 <div class="search-and-filter-section">
                     <div class="search-container">
                         <input type="text" autocomplete="off" class="search-bar" placeholder="Search book...">
-                        <button class="search-button">Search</button>
+                        <button class="search-button"><box-icon name='search-alt' color='rgba(255,255,255,0.95)' ></box-icon></button>
                     </div>
         
                     <!-- <button class="toggle-filters">
@@ -108,17 +119,17 @@
 
                     <div class="our-contacts">
                         <div class="contact-type">
-                            <box-icon name='envelope' type='solid' color='#4fd2e4' ></box-icon>
+                            <box-icon name='envelope' type='solid' color='rgba(145,165,42,0.95)' ></box-icon>
                             <p>contact@bookfinder.info</p>
                         </div>
 
                         <div class="contact-type">
-                            <box-icon name='phone-call' type='solid' color='#4fd2e4' ></box-icon>
+                            <box-icon name='phone-call' type='solid' color='rgba(145,165,42,0.95)' ></box-icon>
                             <p>+254 700 000 000</p>
                         </div>
 
                         <div class="contact-type">
-                            <box-icon name='phone-call' type='solid' color='#4fd2e4' ></box-icon>
+                            <box-icon name='phone-call' type='solid' color='rgba(145,165,42,0.95)' ></box-icon>
                             <p>3554 Cottonwood Lane, Grand Rapids <br>
                                 MI 49503, Michigan, USA</p>
                         </div>
