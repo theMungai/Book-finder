@@ -515,3 +515,11 @@ hr{
     color: rgb(122, 122, 122);
     cursor: not-allowed;
 }
+
+footer{
+    width: 100%;
+    background-color: var(--divs-background);
+    color: var(--inputs-color);
+    text-align: center;
+    padding: 30px 0px;
+}
