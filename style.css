@@ -620,8 +620,104 @@ footer{
 
 
 /* ====================== Media Queries ============================ */
-/* ====================== Mobile Device ============================*/
+/* ====================== Portrait Mobile Device ============================*/
 @media(max-width:480px){
+    header{
+        padding: 30px 20px;
+    }
+
+    .header-logo{
+        font-size: 1.5rem;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    .menu-control{
+        display: block;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    main{
+        width: 90%;
+        margin: 0px auto;
+    }
+    
+    .hero-page{
+        margin-top: 150px;  
+    }
+    
+    .hero-text{
+        width: 100%;
+    }
+    
+    .hero-text h1{
+        font-size: 2.6rem;
+    }
+    
+    .hero-text p{
+        padding: 10px 0px;
+    }
+    
+    .search-box-container{
+        width: 100%; 
+    }
+
+    .search-container{
+        padding: 10px;   
+    }
+
+    .books-grid{
+        width: 100%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .list-item{
+        width: 100%;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+    .our-contacts{
+        margin: 40px 0px;
+    }
+
+    .write-a-message form input{
+        font-size: 1rem;
+    }
+    
+    /* Dynamically generated div styles */
+    
+    .dynamically-generated-div{
+        margin: 150px auto;
+        padding: 10px;
+    }
+
+    .book-full-details{
+        display: block;
+    }
+    
+    .book-cover{
+        width: 100%;
+    }
+    
+    .book-full-info{
+        width: 100%;
+    }
+
+}
+
+/* ====================== Landscape Mobile Device ============================*/
+@media(min-width:481px) and (max-width : 767px){
     header{
         padding: 30px 20px;
     }
