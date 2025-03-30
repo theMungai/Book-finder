@@ -297,6 +297,7 @@ form.addEventListener('submit', function(e) {
 const sideBar = document.querySelector(".sidebar")
 function toggleSidebar(){
     sideBar.classList.toggle("js-position-sidebar")
+    sideBar.style.display = "block"
 }
 
 document.querySelector(".menu-control").addEventListener("click", () => {
