@@ -30,16 +30,20 @@ function populateBooks(books){
 const themeSwitch = document.querySelector(".theme-controls")
 
 function togglingTheme(){
-    const lightThemeBtn = document.querySelector(".light-theme-btn");
-    const darkThemeBtn = document.querySelector(".dark-theme-btn");
+    const lightThemeBtn = document.querySelectorAll(".light-theme-btn");
+    const darkThemeBtn = document.querySelectorAll(".dark-theme-btn");
 
-    lightThemeBtn.addEventListener("click", () => {
+    lightThemeBtn.forEach((light) => light.addEventListener("click", () => {
         document.body.classList.toggle("light-mode");       
-    });
-
-    darkThemeBtn.addEventListener("click", () => {
-        document.body.classList.remove("light-mode")
+    }))
+    
+    darkThemeBtn.forEach((dark) => {
+        dark.addEventListener("click", () => {
+            document.body.classList.remove("light-mode")
+        })
     })
+
+    
 }
 togglingTheme()
 
@@ -174,7 +178,6 @@ function bookDetails(book) {
                 <div class="comment-user-input">
                     <input type="text" class="comment-input" placeholder="Add a comment">
                     <div class="comment-buttons">
-                        <button class="cancel-button">Cancel</button>
                         <button class="comment-button" disabled>Comment</button>
                     </div>
                 </div>
@@ -290,3 +293,23 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
+
+const sideBar = document.querySelector(".sidebar")
+function toggleSidebar(){
+    sideBar.classList.toggle("js-position-sidebar")
+}
+
+document.querySelector(".menu-control").addEventListener("click", () => {
+    toggleSidebar()
+})
+
+function minimizeSidebar(){
+    const minimizeBtn = document.querySelector(".minimize-sidebar")
+
+    minimizeBtn.addEventListener("click", () => {
+        sideBar.classList.toggle("activate-sidebar")
+        minimizeBtn.classList.toggle("rotate-minimize-button")
+        
+    })
+}
+minimizeSidebar()

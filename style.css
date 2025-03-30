@@ -62,9 +62,9 @@ nav{
 
 nav ul{
     width: 70%;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
 }
 
 nav ul li{
@@ -93,6 +93,97 @@ nav ul li{
 
 .light-mode .theme-controls box-icon:last-child{
     display: block;
+}
+
+.menu-control{
+    display: none;
+}
+
+.sidebar{
+    width: 70px;
+    height: 70vh;
+    border-radius: 20px;
+    padding: 20px;
+    position: fixed;
+    top: 15%;
+    left: -70px;
+    background-color: var(--divs-background);
+    z-index: 10;
+}
+
+.js-position-sidebar{
+    left: 4px;
+}
+
+.minimized-item{
+    display: none;
+    text-align: right;
+}
+
+.minimize-sidebar{
+    position: relative;
+    top: 50%;
+    left: 80%;
+}
+
+.tooltip{
+    padding: 6px 10px;
+    border-radius: 10px;
+    background-color: var(--major-topics-color);
+    position: relative;
+    left: 30px;
+    display: none;
+}
+
+.nav-items{
+    /* border: 4px solid blueviolet; */
+    list-style: none;
+}
+
+.nav-items li{
+    padding: 20px 0px;
+}
+
+.nav-items li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--header-colors);
+}
+
+.light-and-dark-themes, 
+.nav-items li{
+    display: flex;
+    align-items: center;
+}
+
+.light-and-dark-themes:hover, 
+.nav-items li:hover{
+    .tooltip{
+        display: block;
+    }
+}
+
+.rotate-minimize-button{
+    transform: rotate(180deg);
+}
+
+.sidebar.activate-sidebar {
+    width: 200px;
+}
+
+.sidebar.activate-sidebar .sidebar-icons{
+    margin-right: 20px;
+}
+
+.sidebar.activate-sidebar .minimized-item{
+    display: block;
+}
+
+.theme-container{
+    display: flex;
+    align-items: center;
+    color: var(--header-colors);
 }
 
 main{
@@ -144,6 +235,7 @@ main{
     overflow-y: scroll;
     width: 100%;
     background-color: var(--divs-background);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -489,29 +581,6 @@ hr{
     padding: 10px;
 }
 
-.comment-buttons{
-    margin: 20px;
-    width: 20%;
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.comment-buttons .cancel-button{
-    color: var(--inputs-color);
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    padding: 10px 16px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.comment-buttons .cancel-button:hover{
-    background-color: var(--inputs-color);
-}
 
 .comment-buttons .comment-button{
     border: none;
@@ -519,7 +588,7 @@ hr{
     border-radius: 25px;
     padding: 10px 16px;
     font-weight: 500;
-    
+    float: right;
 }
 
 .activate-comment-button{
@@ -540,4 +609,102 @@ footer{
     color: var(--header-colors);
     text-align: center;
     padding: 30px 0px;
+}
+
+
+/* ====================== Media Queries ============================ */
+/* ====================== Mobile Device ============================*/
+@media(max-width:480px){
+    header{
+        padding: 30px 20px;
+    }
+
+    .header-logo{
+        font-size: 1.5rem;
+    }
+    
+    nav{
+        width: 6%;
+    }
+
+    .nav-content{
+        display: none;
+    }
+
+    .menu-control{
+        display: block;
+    }
+
+    main{
+        width: 90%;
+        margin: 0px auto;
+    }
+    
+    .hero-page{
+        margin-top: 150px;  
+    }
+    
+    .hero-text{
+        width: 100%;
+    }
+    
+    .hero-text h1{
+        font-size: 2.6rem;
+    }
+    
+    .hero-text p{
+        padding: 10px 0px;
+    }
+    
+    .search-box-container{
+        width: 100%; 
+    }
+
+    .search-container{
+        padding: 10px;   
+    }
+
+    .books-grid{
+        width: 100%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .list-item{
+        width: 100%;
+    }
+
+    .contact-info-send-message-container{
+        display: block;
+    }
+
+    .our-contacts{
+        margin: 40px 0px;
+    }
+
+    .write-a-message form input{
+        font-size: 1rem;
+    }
+    
+    /* Dynamically generated div styles */
+    
+    .dynamically-generated-div{
+        margin: 150px auto;
+        padding: 10px;
+    }
+
+    .book-full-details{
+        display: block;
+    }
+    
+    .book-cover{
+        width: 100%;
+    }
+    
+    .book-full-info{
+        width: 100%;
+    }
+
 }

@@ -20,20 +20,66 @@
         </a>
 
         <nav>
-            <ul>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-            </ul>
-
-
-            <div class="theme-controls">
-                <box-icon name='sun' color='rgba(145,165,42,0.95)' class="light-theme-btn" ></box-icon>
-                <box-icon type='solid' name='moon' color='rgba(145,165,42,0.95)' class="dark-theme-btn"></box-icon>
+            <div class="nav-content">
+                <ul class="nav-items">
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+    
+                <div class="theme-controls">
+                    <box-icon name='sun' color='rgba(145,165,42,0.95)' class="light-theme-btn" ></box-icon>
+                    <box-icon type='solid' name='moon' color='rgba(145,165,42,0.95)' class="dark-theme-btn"></box-icon>
+                </div>
             </div>
+            <box-icon name='menu' color='rgba(145,165,42,0.95)' class="menu-control"></box-icon>
         </nav>
     </header>
 
     <main>
+        <section class="sidebar">
+            <ul class="nav-items">
+                <li>
+                    <a href="#about-us">
+                        <box-icon name='info-circle' type='solid' color='rgba(145,165,42,0.95)' class="sidebar-icons" ></box-icon>
+                        <span class="minimized-item">
+                            About Us
+                        </span>                        
+                    </a>
+                    <span class="tooltip">About</span>
+                </li>
+    
+                <li>
+                    <a href="#contact-us">
+                        <box-icon name='support' color='rgba(145,165,42,0.95)' class="sidebar-icons"></box-icon>
+                        <span class="minimized-item">
+                            Contact Us
+                        </span>                       
+                    </a>
+                    <span class="tooltip">Contact</span>
+                </li>
+
+                <li>
+
+                </li>
+            </ul>
+            
+            <div class="theme-container">
+                <div class="light-and-dark-themes">
+                    <div class="theme-controls">
+                        <box-icon name='sun' color='rgba(145,165,42,0.95)' class="light-theme-btn sidebar-icons" ></box-icon>
+                        <box-icon type='solid' name='moon' color='rgba(145,165,42,0.95)' class="dark-theme-btn"></box-icon>
+        
+                    </div>
+                    <span class="tooltip">Theme</span>
+                </div>
+                <span class="minimized-item">
+                    Theme
+                </span> 
+            </div>
+            
+            
+            <box-icon name='right-arrow-circle' color='rgba(145,165,42,0.95)' class="minimize-sidebar"></box-icon>
+        </section>
         <section class="hero-page" id="hero-page">
             <div class="hero-text">
                 <h1>
@@ -50,29 +96,12 @@
                         <input type="text" autocomplete="off" class="search-bar" placeholder="Search book...">
                         <button class="search-button"><box-icon name='search-alt' color='rgba(255,255,255,0.95)' ></box-icon></button>
                     </div>
-        
-                    <!-- <button class="toggle-filters">
-                        <box-icon name='filter' color='#6c6a6a' ></box-icon>
-                        Filters
-                    </button> -->
                 </div>
 
                 <div class="result-box-container">
                     <ul class="result-box"></ul>
                 </div>
             </div>
-            
-
-            <!-- <div class="filter-options">
-                <button class = "button-filters" id = "romance-filter">Romance</button>
-                <button class = "button-filters" id = "scifi-filter">Sci-Fi</button>
-                <button class = "button-filters" id = "fiction-filter">Fiction</button>
-                <button class = "button-filters" id = "comedy-filter">Comedy</button>
-                <button class = "button-filters" id = "historical-filter">Historical</button>
-                <button class = "button-filters" id = "fantasy-filter">Fantasy</button>
-                <button class = "button-filters" id = "biography-filter">Biography</button>
-                <button class = "button-filters" id = "magazine-filter">Magazine</button>                
-            </div> -->
             
         </section>
 
