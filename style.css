@@ -135,16 +135,15 @@ nav ul li{
     display: none;
 }
 
-.nav-items{
-    /* border: 4px solid blueviolet; */
+.sidebar-nav-items{
     list-style: none;
 }
 
-.nav-items li{
+.sidebar-nav-items li{
     padding: 20px 0px;
 }
 
-.nav-items li a{
+.sidebar-nav-items li a{
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -152,13 +151,13 @@ nav ul li{
 }
 
 .light-and-dark-themes, 
-.nav-items li{
+.sidebar-nav-items li{
     display: flex;
     align-items: center;
 }
 
 .light-and-dark-themes:hover, 
-.nav-items li:hover{
+.sidebar-nav-items li:hover{
     .tooltip{
         display: block;
     }
