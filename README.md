@@ -69,7 +69,7 @@ git clone https://github.com/theMungai/Book-finder.git
 cd Book-finder
 - Open it with your preferred IDE
 ```
-3. Open with Live Server
+3. Open with Live Server to your favorite browser
 
           
 
