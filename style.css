@@ -346,6 +346,34 @@ hr{
     z-index: -2;
 }
 
+.loader {
+    display: grid;
+    place-content: center;
+    margin: 100px auto;
+    text-align: center;
+    color: var(--major-topics-color);
+  }
+  
+  .loading-books {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top: 2px solid var(--major-topics-color);
+    border-bottom: 2px solid var(--major-topics-color);
+    animation: animate-loader 1s linear infinite;
+    margin-bottom: 16px;
+    
+  }
+  
+  @keyframes animate-loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 .list-item{
     width: 200px;
     list-style: none;

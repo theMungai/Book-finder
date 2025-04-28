@@ -1,30 +1,47 @@
 
 // Fetch Books
-function fetchBooks(){
+function fetchBooks() {
+    // Show the loader before the fetch
+    document.querySelector(".loader").style.display = "grid";  // Show loader
+  
     fetch("https://book-finder-8ady.onrender.com/books")
-    .then((response) => response.json())
-    .then((books) =>  populateBooks(books));
-    
-}
-fetchBooks()
-
-
-// Display Books to the DOM
-const booksGrid = document.querySelector(".books-grid");
-booksGrid.innerHTML = ""
-function populateBooks(books){
-    books.forEach((book => {
-        let bookPoster = document.createElement("li")
-        bookPoster.classList.add("list-item")
-        bookPoster.innerHTML = `<img src = "${book.image_url}">`
+      .then((response) => response.json())
+      .then((books) => {
+        populateBooks(books);
+        document.querySelector(".loader").style.display = "none";  // Hide loader once books are fetched
+      })
+      .catch((error) => {
+        console.error("Error fetching books:", error);
+        document.querySelector(".loader").style.display = "none";  // Hide loader if error occurs
+      });
+  }
+  fetchBooks();
+  
+  // Display Books to the DOM
+  const booksGrid = document.querySelector(".books-grid");
+  
+  function populateBooks(books) {
+    booksGrid.innerHTML = ""; // Clear any existing content
+  
+    if (books.length === 0) {
+      const noBooksMessage = document.createElement("p");
+      noBooksMessage.textContent = "No books found!";
+      booksGrid.appendChild(noBooksMessage);
+    } else {
+      books.forEach((book) => {
+        let bookPoster = document.createElement("li");
+        bookPoster.classList.add("list-item");
+        bookPoster.innerHTML = `<img src="${book.image_url}" alt="${book.title}">`;
         bookPoster.addEventListener("click", () => {
-            bookDetails(book)
-        })
-        booksGrid.appendChild(bookPoster)
-    }))
-    
-    handleSearchBar(books)
-}
+          bookDetails(book);
+        });
+        booksGrid.appendChild(bookPoster);
+      });
+    }
+  
+    handleSearchBar(books); // Assuming you have a search bar handling function
+  }
+  
 
 // Light and Dark theme controls
 const themeSwitch = document.querySelector(".theme-controls")
