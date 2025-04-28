@@ -48,9 +48,28 @@ Book Finder is a Single Page Application (SPA) that allows users to search for t
 ## How to Set Up
 
 ### 1. Clone the repository
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- **Git**: [Download Git](https://git-scm.com/downloads)
+- **Node.js**: [Download Node.js](https://nodejs.org/) (includes npm)
+- **Visual Studio Code** (or your preferred IDE)
+
+## Step 1: Clone the Repository
+
+1. Open your terminal (Command Prompt, Git Bash, or Terminal).
+2. Navigate to the folder where you want to clone the repository:
+   ```bash
+   cd /path/to/your/folder
 
 ```bash
 git clone https://github.com/theMungai/Book-finder.git
+
+cd Book-finder
+- Open it with your preferred IDE
+```
+3. Open with Live Server to your favorite browser
 
           
 
